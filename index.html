@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arisha Mediquip Inauguration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, proud, festive-but-professional — a new medical supplier opening its doors
+   IDEA: the shop's own signboard — maroon board, gold lettering, green shopfront
+   PICTURE: the storefront with a gold ribbon and scissors, ready to be cut
+   COLOUR and TYPE: maroon #8e1033 dominant, gold #f2c230 accent, shopfront green #6db33f support; Archivo + Hind Siliguri (Bengali-ready)
+   LAYOUT: signboard band on top, picture large, then details, then one calm registration column */
+:root{color-scheme:light dark;
+--bg:light-dark(#fffdf8,#160a0e);--ink:light-dark(#22161a,#f6eee9);--mut:light-dark(#6d5a60,#c2adb3);
+--card:light-dark(#ffffff,#24131a);--line:light-dark(#ead9dc,#3e2630);
+--mar:#8e1033;--mar2:light-dark(#8e1033,#c43a5f);--gold:#f2c230;--grn:#6db33f;--grnd:light-dark(#3f7d1f,#8fd062)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Hind Siliguri",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3,.brand{font-family:Archivo,"Hind Siliguri",sans-serif;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(26px,3.6vw,38px)}
+a{color:inherit}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1180px;margin:0 auto}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+/* top */
+.top{position:sticky;top:0;z-index:5;background:var(--mar);color:#fff;border-bottom:3px solid var(--gold)}
+.top .wrap{display:flex;align-items:center;gap:16px;padding:10px max(5vw,16px);flex-wrap:wrap}
+.brand{font-size:18px;font-weight:800;letter-spacing:.01em;flex:1}
+.brand small{display:block;font:500 12.5px "Hind Siliguri",sans-serif;color:#ffe9a8}
+.top nav{display:flex;gap:4px;flex-wrap:wrap}
+.top nav a{text-decoration:none;padding:8px 12px;border-radius:8px;font-size:15px}
+.top nav a:hover,.top nav a:focus-visible{background:rgba(255,255,255,.14)}
+.top nav a.cta{background:var(--gold);color:#3a0716;font-weight:600}
+/* hero */
+.hero{background:var(--mar);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,4vw,56px);align-items:center}
+.pill{display:inline-block;background:var(--gold);color:#3a0716;font-weight:600;padding:5px 14px;border-radius:99px;font-size:15px;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:800}
+.hero h1 span{display:block;color:var(--gold);font-size:.52em;font-weight:700;margin-top:10px}
+.hero p{font-size:18px;color:#fbe7ea;max-width:34em}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin:18px 0 24px;padding:0;list-style:none}
+.facts li{font-size:16px}.facts b{display:block;font-family:Archivo,sans-serif;color:var(--gold);font-size:13.5px;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:10px;border:0;font:600 17px "Hind Siliguri",sans-serif;cursor:pointer;text-decoration:none}
+.btn.gold{background:var(--gold);color:#3a0716}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn.mar{background:var(--mar);color:#fff}
+.btn.wa{background:#1f9e55;color:#fff}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.scene{width:100%;height:auto;display:block}
+.scene{cursor:pointer}
+.cf,.open,.flash{opacity:0}
+.flash{transform-origin:280px 250px;transform-box:view-box}
+.tw{transform-box:fill-box;transform-origin:center;animation:tw 2.4s ease-in-out infinite}
+@keyframes tw{0%,100%{transform:scale(.6);opacity:.5}50%{transform:scale(1.15);opacity:1}}
+.play .sc{animation:sc 7s cubic-bezier(.4,0,.2,1) infinite}
+.play .bu{animation:bu 7s ease-in-out infinite}
+.play .bl{animation:bl 7s ease-in-out infinite}
+.play .rl{animation:rl 7s infinite}
+.play .rr{animation:rr 7s infinite}
+.play .bow{animation:bow 7s infinite}
+.play .cf{animation:cf 7s cubic-bezier(.15,.7,.3,1) infinite}
+.play .open{animation:op 7s infinite}
+.play .flash{animation:fl 7s infinite}
+@keyframes sc{0%{transform:translate(180px,14px);opacity:0}5%{opacity:1}22%{transform:translate(0,0)}36%{transform:translate(0,0);opacity:1}48%{transform:translate(130px,-120px) rotate(-25deg);opacity:0}100%{transform:translate(130px,-120px);opacity:0}}
+@keyframes bu{0%,100%{transform:rotate(18deg)}8%{transform:rotate(4deg)}14%{transform:rotate(18deg)}20%{transform:rotate(4deg)}25%{transform:rotate(22deg)}29%,40%{transform:rotate(0)}}
+@keyframes bl{0%,100%{transform:rotate(-18deg)}8%{transform:rotate(-4deg)}14%{transform:rotate(-18deg)}20%{transform:rotate(-4deg)}25%{transform:rotate(-22deg)}29%,40%{transform:rotate(0)}}
+@keyframes rl{0%,29%{transform:rotate(0);opacity:1;animation-timing-function:cubic-bezier(.5,0,.8,.4)}38%{transform:rotate(86deg)}42%{transform:rotate(74deg)}46%{transform:rotate(81deg);opacity:1}56%{transform:rotate(81deg) translateY(30px);opacity:0}97%{transform:rotate(0);opacity:0}100%{transform:rotate(0);opacity:1}}
+@keyframes rr{0%,29%{transform:rotate(0);opacity:1;animation-timing-function:cubic-bezier(.5,0,.8,.4)}38%{transform:rotate(-86deg)}42%{transform:rotate(-74deg)}46%{transform:rotate(-81deg);opacity:1}56%{transform:rotate(-81deg) translateY(30px);opacity:0}97%{transform:rotate(0);opacity:0}100%{transform:rotate(0);opacity:1}}
+@keyframes bow{0%,29%{transform:none;opacity:1;animation-timing-function:ease-in}44%{transform:translate(-10px,140px) rotate(-50deg);opacity:0}97%{transform:none;opacity:0}100%{opacity:1}}
+@keyframes cf{0%,29%{transform:scale(0);opacity:0}30%{opacity:1;transform:scale(1)}48%{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:1}72%{transform:translate(var(--x),calc(var(--y) + 120px)) rotate(calc(var(--r) * 2));opacity:0}100%{opacity:0}}
+@keyframes op{0%,36%{transform:scale(0);opacity:0}44%{transform:scale(1.12);opacity:1}49%{transform:scale(1)}88%{transform:scale(1);opacity:1}94%,100%{transform:scale(1);opacity:0}}
+@keyframes fl{0%,28%{transform:scale(.2);opacity:0}31%{opacity:1}42%{transform:scale(2.4);opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.open{opacity:1}.sc,.rl,.rr,.bow{opacity:0}}
+/* about */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{margin:0;color:var(--mut)}
+.ico{width:44px;height:44px;margin-bottom:12px}
+.lead{max-width:46em;color:var(--mut);font-size:17.5px}
+/* event */
+.event{background:var(--grn);background:linear-gradient(0deg,color-mix(in srgb,var(--grn) 14%,var(--bg)),color-mix(in srgb,var(--grn) 14%,var(--bg)))}
+.ev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.ev div{background:var(--card);border-radius:14px;padding:18px 20px;border-top:4px solid var(--grnd)}
+.ev b{display:block;font-family:Archivo,sans-serif;font-size:14px;color:var(--grnd)}
+.ev span{font-size:17.5px;font-weight:500}
+/* form */
+.formband .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(20px,4vw,48px);align-items:start}
+form,.done{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,30px)}
+fieldset{border:0;padding:0;margin:0}
+.f{margin-bottom:16px}
+label{display:block;font-weight:600;margin-bottom:6px;font-size:16px}
+label i{color:var(--mar2);font-style:normal}
+label small{font-weight:400;color:var(--mut)}
+input,select,textarea{width:100%;min-height:48px;padding:10px 14px;border:1.5px solid var(--line);border-radius:10px;font:16px "Hind Siliguri",sans-serif;background:var(--bg);color:var(--ink)}
+.cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cats label{display:flex;align-items:center;gap:10px;margin:0;min-height:48px;padding:8px 12px;border:1.5px solid var(--line);border-radius:10px;font-weight:500;cursor:pointer}
+.cats input{width:20px;min-height:20px;height:20px;accent-color:var(--mar)}
+.cats label:has(input:checked){border-color:var(--mar2);background:color-mix(in srgb,var(--mar) 9%,var(--card))}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.sub{border-top:1px dashed var(--line);padding-top:16px;margin-top:4px}
+.err{color:#c0262d;font-size:14.5px;margin:4px 0 0;min-height:0}
+.hide{display:none!important}
+.done h3{font-size:26px;color:var(--grnd);margin-bottom:8px}
+.sum{background:var(--bg);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:15.5px;white-space:pre-wrap}
+.qr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
+.qr img{width:100%;max-width:240px;aspect-ratio:1;display:block;margin:10px auto;border-radius:8px;background:#fff;padding:8px}
+.qr p{color:var(--mut);margin:0;font-size:15px}
+.note{font-size:14px;color:var(--mut)}
+/* admin */
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card)}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{font-family:Archivo,sans-serif;font-size:13.5px;color:var(--mut)}
+.scroll{overflow-x:auto}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.stats span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-size:14.5px}
+footer{background:#2a0610;color:#f3dfe4;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 32px;justify-content:space-between}
+@media(max-width:860px){.hero .wrap,.formband .wrap{grid-template-columns:minmax(0,1fr)}.cards,.ev{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.top nav a:not(.cta){display:none}.cats,.two{grid-template-columns:minmax(0,1fr)}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mut)}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">ARISHA MEDIQUIP PVT. LTD.<small>Dialysis &amp; Lab Equipment · Berhampore</small></div>
+  <nav><a href="#about">About</a><a href="#event">Inauguration</a><a href="#register" class="cta">Register</a></nav>
+</div></header>
+
+<main id="site">
+<section class="hero band"><div class="wrap">
+  <div>
+    <div class="pill">Grand Inauguration · 26 November 2026</div>
+    <h1>Arisha Mediquip Private Limited<span>শুভ উদ্বোধন — Opening our doors in Berhampore</span></h1>
+    <p>All types of dialysis and laboratory equipment, now available close to you in Murshidabad. Join us for the inauguration and register to stay connected.</p>
+    <ul class="facts">
+      <li><b>Date</b>Thursday, 26 Nov 2026</li>
+      <li><b>Venue</b>Chaltia, Berhampore</li>
+      <li><b>Contact</b>90642 40440</li>
+    </ul>
+    <div class="row"><a class="btn gold" href="#register">Register now</a><a class="btn ghost" href="#about">What we supply</a></div>
+  </div>
+  <svg class="scene play" id="scene" viewBox="0 0 560 400" role="img" aria-label="Scissors cutting the gold ribbon at the Arisha Mediquip shopfront. Tap to play again.">
+    <defs>
+      <linearGradient id="wall" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7fc451"/><stop offset="1" stop-color="#559a2e"/></linearGradient>
+      <linearGradient id="sh" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#eef3f6"/><stop offset="1" stop-color="#c4ced6"/></linearGradient>
+      <linearGradient id="rib" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset=".5" stop-color="#f2c230"/><stop offset="1" stop-color="#c98f0c"/></linearGradient>
+      <linearGradient id="steel" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#aab6c0"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#fff6c8"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></radialGradient>
+      <g id="spark"><path d="M0-9 2-2 9 0 2 2 0 9-2 2-9 0-2-2Z" fill="#ffd85a"/></g>
+    </defs>
+    <ellipse cx="280" cy="372" rx="250" ry="16" fill="#000" opacity=".22"/>
+    <rect x="50" y="70" width="460" height="300" rx="6" fill="url(#wall)"/>
+    <rect x="50" y="70" width="460" height="10" fill="#9fdc74"/>
+    <path d="M30 96 280 58 530 96 530 112 30 112Z" fill="#dfe5ea"/><path d="M30 112h500v8H30z" fill="#9aa6af"/>
+    <rect x="72" y="126" width="416" height="66" rx="5" fill="#8e1033" stroke="#ffd85a" stroke-width="2"/>
+    <text x="280" y="160" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="25" fill="#fff">ARISHA MEDIQUIP</text>
+    <text x="280" y="181" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="700" font-size="12" fill="#ffd85a">DIALYSIS &amp; LAB EQUIPMENTS</text>
+    <rect x="120" y="208" width="320" height="162" fill="url(#sh)"/>
+    <g stroke="#a9b5be" stroke-width="2"><path d="M120 236h320M120 266h320M120 296h320M120 326h320M280 208v162"/></g>
+    <rect x="80" y="230" width="28" height="140" fill="#3f7d1f" opacity=".5"/><rect x="452" y="230" width="28" height="140" fill="#3f7d1f" opacity=".5"/>
+    <g transform="translate(280 302)"><g class="open">
+      <rect x="-118" y="-36" width="236" height="66" rx="12" fill="#8e1033"/>
+      <text y="-4" text-anchor="middle" font-family="'Hind Siliguri',sans-serif" font-weight="600" font-size="27" fill="#ffd85a">শুভ উদ্বোধন</text>
+      <text y="20" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="800" font-size="14" fill="#fff" letter-spacing="2">WE ARE OPEN</text>
+    </g></g>
+    <circle class="flash" cx="280" cy="250" r="70" fill="url(#glow)"/>
+    <g transform="translate(60 262)"><g class="rl"><path d="M0 0C80-12 160-14 222-12" stroke="url(#rib)" stroke-width="13" fill="none" stroke-linecap="round"/></g></g>
+    <g transform="translate(500 262)"><g class="rr"><path d="M0 0C-80-12-160-14-222-12" stroke="url(#rib)" stroke-width="13" fill="none" stroke-linecap="round"/></g></g>
+    <g transform="translate(280 250)"><g class="bow">
+      <path d="M-4 0-30-22Q-40-6-30 14ZM4 0 30-22Q40-6 30 14Z" fill="#f2c230" stroke="#c98f0c" stroke-width="2"/>
+      <path d="M-6 6-16 40-6 34 0 42ZM6 6 16 40 6 34 0 42Z" fill="#e0a919"/>
+      <circle r="10" fill="#ffd85a" stroke="#c98f0c" stroke-width="2.5"/>
+    </g></g>
+    <g transform="translate(280 250)"><g class="cf" style="--x:-49px;--y:79px;--r:-442deg;animation-delay:9ms"><circle r="5" fill="#f2c230"/></g><g class="cf" style="--x:80px;--y:-50px;--r:-422deg;animation-delay:116ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ffffff"/></g><g class="cf" style="--x:2px;--y:-74px;--r:348deg;animation-delay:53ms"><circle r="5" fill="#6db33f"/></g><g class="cf" style="--x:92px;--y:34px;--r:329deg;animation-delay:7ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ff8fb0"/></g><g class="cf" style="--x:85px;--y:-51px;--r:-83deg;animation-delay:80ms"><circle r="5" fill="#ffd85a"/></g><g class="cf" style="--x:81px;--y:-172px;--r:272deg;animation-delay:6ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#8fd0ff"/></g><g class="cf" style="--x:93px;--y:-11px;--r:-268deg;animation-delay:37ms"><circle r="5" fill="#f2c230"/></g><g class="cf" style="--x:-38px;--y:-131px;--r:91deg;animation-delay:71ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ffffff"/></g><g class="cf" style="--x:89px;--y:-57px;--r:-156deg;animation-delay:47ms"><circle r="5" fill="#6db33f"/></g><g class="cf" style="--x:159px;--y:89px;--r:-418deg;animation-delay:79ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ff8fb0"/></g><g class="cf" style="--x:-140px;--y:-102px;--r:335deg;animation-delay:99ms"><circle r="5" fill="#ffd85a"/></g><g class="cf" style="--x:-88px;--y:-121px;--r:388deg;animation-delay:46ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#8fd0ff"/></g><g class="cf" style="--x:-64px;--y:157px;--r:-41deg;animation-delay:10ms"><circle r="5" fill="#f2c230"/></g><g class="cf" style="--x:35px;--y:-130px;--r:163deg;animation-delay:93ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ffffff"/></g><g class="cf" style="--x:-26px;--y:-142px;--r:-391deg;animation-delay:15ms"><circle r="5" fill="#6db33f"/></g><g class="cf" style="--x:-112px;--y:-7px;--r:160deg;animation-delay:19ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ff8fb0"/></g><g class="cf" style="--x:142px;--y:-41px;--r:-382deg;animation-delay:97ms"><circle r="5" fill="#ffd85a"/></g><g class="cf" style="--x:34px;--y:-162px;--r:102deg;animation-delay:43ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#8fd0ff"/></g><g class="cf" style="--x:-60px;--y:-133px;--r:394deg;animation-delay:8ms"><circle r="5" fill="#f2c230"/></g><g class="cf" style="--x:188px;--y:-105px;--r:430deg;animation-delay:89ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ffffff"/></g><g class="cf" style="--x:43px;--y:-69px;--r:94deg;animation-delay:82ms"><circle r="5" fill="#6db33f"/></g><g class="cf" style="--x:-167px;--y:-71px;--r:372deg;animation-delay:36ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ff8fb0"/></g><g class="cf" style="--x:127px;--y:-144px;--r:170deg;animation-delay:2ms"><circle r="5" fill="#ffd85a"/></g><g class="cf" style="--x:133px;--y:-36px;--r:-301deg;animation-delay:63ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#8fd0ff"/></g><g class="cf" style="--x:189px;--y:59px;--r:-276deg;animation-delay:94ms"><circle r="5" fill="#f2c230"/></g><g class="cf" style="--x:-96px;--y:-88px;--r:476deg;animation-delay:10ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ffffff"/></g><g class="cf" style="--x:-120px;--y:-69px;--r:29deg;animation-delay:113ms"><circle r="5" fill="#6db33f"/></g><g class="cf" style="--x:99px;--y:92px;--r:30deg;animation-delay:90ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#ff8fb0"/></g><g class="cf" style="--x:-34px;--y:-110px;--r:239deg;animation-delay:29ms"><circle r="5" fill="#ffd85a"/></g><g class="cf" style="--x:-95px;--y:-50px;--r:-65deg;animation-delay:84ms"><rect x="-4" y="-7" width="8" height="14" rx="2" fill="#8fd0ff"/></g></g>
+    <g transform="translate(348 250)"><g class="sc">
+      <g class="bu"><path d="M0-3-70-6Q-76-1-70 1L0 4Z" fill="url(#steel)" stroke="#7d8a94" stroke-width="1.2"/><path d="M4-3 22-14" stroke="#8e1033" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="-20" r="12" fill="none" stroke="#8e1033" stroke-width="7"/></g>
+      <g class="bl"><path d="M0 3-70 6Q-76 1-70-1L0-4Z" fill="url(#steel)" stroke="#7d8a94" stroke-width="1.2"/><path d="M4 3 22 14" stroke="#8e1033" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="20" r="12" fill="none" stroke="#8e1033" stroke-width="7"/></g>
+      <circle r="4" fill="#f2c230" stroke="#7d8a94"/>
+    </g></g>
+    <use class="tw" href="#spark" x="40" y="50"/><use class="tw" href="#spark" x="520" y="40" style="animation-delay:.6s"/><use class="tw" href="#spark" x="300" y="22" style="animation-delay:1.1s"/><use class="tw" href="#spark" x="148" y="34" style="animation-delay:1.7s"/><use class="tw" href="#spark" x="430" y="20" style="animation-delay:.3s"/>
+    <circle cx="94" cy="24" r="4" fill="#ffd85a"/><circle cx="472" cy="60" r="3" fill="#fff"/><circle cx="220" cy="40" r="3" fill="#fff"/>
+  </svg>
+</div></section>
+
+<section class="band" id="about"><div class="wrap">
+  <h2>Medical equipment, supplied locally</h2>
+  <p class="lead">Arisha Mediquip Private Limited supplies hospitals, nursing homes, diagnostic centres, pharmacies and practitioners across Murshidabad and nearby districts — so you get the equipment and consumables you need without waiting on Kolkata.</p>
+  <div class="cards">
+    <div class="card"><svg class="ico" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#8e1033"/><path d="M14 10h16v24H14z" fill="#fff"/><path d="M18 15h8v6h-8z" fill="#f2c230"/><circle cx="22" cy="28" r="3" fill="#8e1033"/></svg><h3>Dialysis equipment</h3><p>Dialysis machines, consumables and accessories for renal units of every size.</p></div>
+    <div class="card"><svg class="ico" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#3f7d1f"/><path d="M18 9h8v4h-1v8l7 13H12l7-13v-8h-1z" fill="#fff"/><path d="M15 29h14l2 5H13z" fill="#f2c230"/></svg><h3>Laboratory equipment</h3><p>Lab instruments and supplies for diagnostic centres, pathology labs and hospital labs.</p></div>
+    <div class="card"><svg class="ico" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#f2c230"/><path d="M9 32V18l13-8 13 8v14z" fill="#8e1033"/><path d="M19 32v-8h6v8z" fill="#fff"/><path d="M21 14h2v3h3v2h-3v3h-2v-3h-3v-2h3z" fill="#fff"/></svg><h3>For every facility</h3><p>Hospitals, nursing homes, polyclinics, diagnostics, pharmacies, RMPs and doctors' chambers.</p></div>
+  </div>
+</div></section>
+
+<section class="band event" id="event"><div class="wrap">
+  <h2>Inauguration day</h2>
+  <div class="ev">
+    <div><b>When</b><span>Thursday, 26 November 2026</span></div>
+    <div><b>Where</b><span>Arisha Mediquip Pvt. Ltd., Chaltia, Berhampore, Murshidabad, West Bengal</span></div>
+    <div><b>Call / WhatsApp</b><span>90642 40440</span></div>
+  </div>
+</div></section>
+
+<section class="band formband" id="register"><div class="wrap">
+  <div>
+    <h2 style="margin-bottom:14px">Register with us</h2>
+    <form id="f" novalidate>
+      <div class="f"><label for="name">Full name <i>*</i></label><input id="name" autocomplete="name" required></div>
+      <div class="two">
+        <div class="f"><label for="phone">Mobile number <i>*</i></label><input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile" required></div>
+        <div class="f"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="name@example.com"></div>
+      </div>
+      <fieldset class="f"><label>You are from <i>*</i></label>
+        <div class="cats" id="cats"></div>
+      </fieldset>
+
+      <div id="g-inst" class="sub hide">
+        <div class="f"><label for="inst" id="inst-l">Name of hospital / nursing home <i>*</i></label><input id="inst"></div>
+        <div class="two">
+          <div class="f" id="beds-f"><label for="beds">Number of beds <i>*</i></label><input id="beds" type="number" inputmode="numeric" min="1"></div>
+          <div class="f"><label for="role">Your role <i>*</i></label>
+            <select id="role"><option value="">Select role</option><option>Manager</option><option>Owner (ওনার)</option><option>Pharmacist</option><option>Pharmacist cum Purchase Manager</option><option>Others</option></select></div>
+        </div>
+        <div class="f hide" id="roleo-f"><label for="roleo">Please specify your role <i>*</i></label><input id="roleo"></div>
+      </div>
+
+      <div id="g-rmp" class="sub hide">
+        <div class="f"><label for="rmpplace">Chamber / practice area <small>(optional)</small></label><input id="rmpplace" placeholder="Village, town or locality"></div>
+      </div>
+
+      <div id="g-da" class="sub hide">
+        <div class="f"><label for="doc">Name of the doctor <i>*</i></label><input id="doc" placeholder="Dr. …"></div>
+        <div class="f"><label for="dept">Department <i>*</i></label><input id="dept" list="depts" placeholder="e.g. Nephrology, Medicine"></div>
+        <datalist id="depts"><option>Nephrology</option><option>Medicine</option><option>Surgery</option><option>Gynaecology &amp; Obstetrics</option><option>Paediatrics</option><option>Orthopaedics</option><option>Cardiology</option><option>ENT</option><option>Pathology</option><option>Radiology</option></datalist>
+      </div>
+
+      <p class="err" id="err" role="alert"></p>
+      <a class="btn mar" id="go" href="#register" target="_blank" rel="noopener" style="width:100%">Submit registration</a>
+    </form>
+
+    <div class="done hide" id="done">
+      <h3>Thank you! ধন্যবাদ</h3>
+      <p id="done-msg">Your details are ready.</p>
+      <div class="sum" id="sum"></div>
+      <div class="row"><a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a><button class="btn ghost" style="color:var(--ink);border-color:var(--line)" id="again" type="button">Register another person</button></div>
+      <p class="note" id="wa-note">Tap “Send on WhatsApp” to complete your registration — it opens WhatsApp with your details filled in for Arisha Mediquip.</p>
+    </div>
+  </div>
+  <aside class="qr">
+    <h3 style="font-size:20px">Scan to register</h3>
+    <img id="qrimg" alt="QR code that opens this registration form" src="data:image/png;base64,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">
+    <p>Share this code at the venue — it opens this form on any phone.</p>
+  </aside>
+</div></section>
+</main>
+
+<section class="band hide" id="admin"><div class="wrap">
+  <h2>Registrations</h2>
+  <p class="note" id="adm-note">Loading…</p>
+  <div class="stats" id="stats"></div>
+  <div class="row" style="margin-bottom:14px"><button class="btn mar" id="copy" type="button">Copy as CSV (paste into Excel / Sheets)</button><a class="btn ghost" style="color:var(--ink);border-color:var(--line)" href="#register">Back to form</a></div>
+  <div class="scroll"><table class="stack"><thead><tr><th>Time</th><th>Name</th><th>Mobile</th><th>Email</th><th>Category</th><th>Details</th></tr></thead><tbody id="rows"></tbody></table></div>
+</div></section>
+
+<footer class="band"><div class="wrap">
+  <div><b>Arisha Mediquip Private Limited</b><br>Chaltia, Berhampore, Murshidabad, West Bengal</div>
+  <div>Mobile: 90642 40440<br>All types of dialysis &amp; lab equipment</div>
+</div></footer>
+
+<script>
+{
+const WA = "919064240440";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbz6yOdaf1vkvM14MQ3sVnxZXEaZ6dM8E0TyxIz8kE9AlfSQA2jBYZ0rNg7h66IOyRPeWQ/exec";
+const CATS = [["hospital","Hospital"],["nursing","Nursing Home"],["diagnostic","Diagnostic Centre"],["polyclinic","Polyclinic"],["pharmacy","Pharmacy"],["rmp","RMP"],["da","Doctor's Assistant"],["other","Others"]];
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+$("cats").innerHTML = CATS.map(([v,l]) => `<label><input type="radio" name="cat" value="${v}"> ${l}</label>`).join("");
+const cat = () => (document.querySelector('input[name=cat]:checked')||{}).value || "";
+const catLabel = v => (CATS.find(c => c[0]===v)||["",""])[1];
+
+function showGroups(){
+  const c = cat(), inst = ["hospital","nursing","diagnostic","polyclinic","pharmacy"].includes(c);
+  $("g-inst").classList.toggle("hide", !inst);
+  $("beds-f").classList.toggle("hide", !(c==="hospital"||c==="nursing"));
+  $("inst-l").innerHTML = `Name of ${esc(catLabel(c).toLowerCase())} <i>*</i>`;
+  $("g-rmp").classList.toggle("hide", c!=="rmp");
+  $("g-da").classList.toggle("hide", c!=="da");
+}
+$("cats").addEventListener("change", showGroups);
+$("role").addEventListener("change", () => $("roleo-f").classList.toggle("hide", $("role").value!=="Others"));
+
+function collect(){
+  const c = cat(), v = id => $(id).value.trim();
+  const r = {name:v("name"), phone:v("phone").replace(/\D/g,"").replace(/^(91|0)(?=\d{10}$)/,""), email:v("email"), category:catLabel(c)};
+  if (!r.name) return "Please enter your name.";
+  if (!/^[6-9]\d{9}$/.test(r.phone)) return "Please enter a valid 10-digit mobile number.";
+  if (r.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(r.email)) return "Please check the email address.";
+  if (!c) return "Please choose who you are (Hospital, Nursing Home, …).";
+  if (["hospital","nursing","diagnostic","polyclinic","pharmacy"].includes(c)){
+    r.institution = v("inst"); if (!r.institution) return `Please enter the name of the ${catLabel(c).toLowerCase()}.`;
+    if (c==="hospital"||c==="nursing"){ r.beds = v("beds"); if (!(+r.beds>0)) return "Please enter the number of beds."; }
+    r.role = $("role").value; if (!r.role) return "Please select your role.";
+    if (r.role==="Others"){ r.role = v("roleo"); if (!r.role) return "Please specify your role."; }
+  }
+  if (c==="rmp") r.area = v("rmpplace");
+  if (c==="da"){ r.doctor = v("doc"); r.department = v("dept"); if (!r.doctor) return "Please enter the doctor's name."; if (!r.department) return "Please enter the department."; }
+  r.at = new Date().toISOString();
+  return r;
+}
+function details(r){
+  return [r.institution && `Institution: ${r.institution}`, r.beds && `Beds: ${r.beds}`, r.role && `Role: ${r.role}`, r.area && `Area: ${r.area}`, r.doctor && `Doctor: ${r.doctor}`, r.department && `Department: ${r.department}`].filter(Boolean);
+}
+function summary(r){
+  return [`Name: ${r.name}`, `Mobile: ${r.phone}`, r.email && `Email: ${r.email}`, `Category: ${r.category}`, ...details(r)].filter(Boolean).join("\n");
+}
+
+let db = null, userNs = null;
+(async () => {
+  try { db = await claude.use("db"); } catch(e) { db = null; }
+  try { userNs = await claude.use("user"); } catch(e) { userNs = null; }
+  route();
+})();
+
+$("f").addEventListener("submit", e => { e.preventDefault(); $("go").click(); });
+$("go").addEventListener("click", e => {
+  const r = collect();
+  if (typeof r === "string"){ e.preventDefault(); $("err").textContent = r; return; }
+  $("err").textContent = "";
+  const params = new URLSearchParams();
+  ["name","phone","email","category","institution","beds","role","area","doctor","department"].forEach(k => { if (r[k]) params.set(k, r[k]); });
+  if (SHEET_URL) $("go").href = SHEET_URL + "?" + params.toString(); else e.preventDefault();
+  if (db){ (async () => { try { const id = userNs && userNs.id ? await userNs.id() : null; if (id) await db.doc("regs/" + id).set(r); } catch(err) {} })(); }
+  const text = "New registration – Arisha Mediquip inauguration\n" + summary(r);
+  $("wa").href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(text);
+  $("sum").textContent = summary(r);
+  $("done-msg").textContent = SHEET_URL ? "Your registration has been sent. A confirmation page opened in a new tab." : "One last step: send your details to us on WhatsApp.";
+  $("wa-note").classList.toggle("hide", !!SHEET_URL);
+  $("wa").textContent = SHEET_URL ? "Also send on WhatsApp" : "Send on WhatsApp";
+  setTimeout(() => { $("f").classList.add("hide"); $("done").classList.remove("hide"); $("done").scrollIntoView({behavior:"smooth", block:"start"}); $("go").href = "#register"; }, 50);
+});
+$("again").addEventListener("click", () => { $("f").reset(); showGroups(); $("roleo-f").classList.add("hide"); $("done").classList.add("hide"); $("f").classList.remove("hide"); $("name").focus(); });
+
+let unsub = null, list = [];
+async function route(){
+  const wantAdmin = location.hash === "#admin";
+  $("admin").classList.toggle("hide", !wantAdmin);
+  $("site").classList.toggle("hide", wantAdmin);
+  if (!wantAdmin) return;
+  const ok = userNs ? await userNs.canEdit() : false;
+  if (!db || !ok){ $("adm-note").textContent = "Only the page owner can see registrations. Open this page signed in as the owner."; return; }
+  if (unsub) return;
+  const t = setTimeout(() => { $("adm-note").textContent = "Still loading… check your connection."; }, 10000);
+  unsub = db.collection("regs").onSnapshot(snap => {
+    clearTimeout(t);
+    list = (snap.docs || []).map(d => (typeof d.data === "function" ? d.data() : d.data) || {}).sort((a,b) => String(b.at).localeCompare(String(a.at)));
+    renderAdmin();
+  }, () => { clearTimeout(t); $("adm-note").textContent = "Could not load registrations."; });
+}
+function renderAdmin(){
+  $("adm-note").textContent = list.length ? `${list.length} registration${list.length>1?"s":""} saved on this page. Registrations sent only on WhatsApp appear in your WhatsApp chats.` : "No registrations saved yet. WhatsApp registrations arrive in your WhatsApp chats.";
+  const counts = {}; list.forEach(r => counts[r.category] = (counts[r.category]||0)+1);
+  $("stats").innerHTML = Object.entries(counts).map(([k,n]) => `<span>${esc(k)}: <b>${n}</b></span>`).join("");
+  $("rows").innerHTML = list.map(r => `<tr><td>${esc(r.at ? new Date(r.at).toLocaleString("en-IN",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}) : "")}</td><td>${esc(r.name)}</td><td>${esc(r.phone)}</td><td>${esc(r.email)}</td><td>${esc(r.category)}</td><td>${details(r).map(esc).join("<br>")}</td></tr>`).join("");
+}
+$("copy").addEventListener("click", async () => {
+  const cols = ["at","name","phone","email","category","institution","beds","role","area","doctor","department"];
+  const q = s => `"${String(s ?? "").replace(/"/g,'""')}"`;
+  const csv = [cols.join(","), ...list.map(r => cols.map(c => q(r[c])).join(","))].join("\n");
+  try { await navigator.clipboard.writeText(csv); $("copy").textContent = "Copied ✓"; } catch(e) { $("copy").textContent = "Copy blocked — select the table instead"; }
+  setTimeout(() => $("copy").textContent = "Copy as CSV (paste into Excel / Sheets)", 2500);
+});
+addEventListener("hashchange", route);
+const sc = $("scene"); sc.addEventListener("click", () => { sc.classList.remove("play"); void sc.getBoundingClientRect(); sc.classList.add("play"); });
+}
+</script>
+</body>
+</html>
